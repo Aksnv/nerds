@@ -15,7 +15,202 @@
 	<header class="main-header">
 		<div class="container">
 			<a class="logo" href="../index.html"><img src="../images/logo/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Nerds»"></a>
+			<nav class="main-menu">
+				<ul class="menu-list">
+					<li class="menu-list__item"><a href="#">Студия</a></li>
+					<li class="menu-list__item"><a href="#">Клиенты</a></li>
+					<li class="menu-list__item menu-list__item_current"><a href="shop.html">Магазин</a></li>
+					<li class="menu-list__item"><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<a class="cart" href="#">Корзина</a>
 		</div>
 	</header>
+	<main>
+		<div class="container">
+			<h1>Магазин готовых шаблонов</h1>
+			<section class="filters">
+        <h2 class="visually-hidden">Фильтр шаблонов</h2>
+        <form class="filters-form" name="filters-form" method="post" action="#">
+        	<fieldset>
+            <legend>Стоимость:</legend>
+              <input class="range" type="range" name="price-range" min="0" max="15000" step="1000" value="10000">
+              <p>От <input class="min-price" type="number" name="min-price" value="0"> до <input class="max-price" type="number" name="max-price" value="15000"></p>
+          </fieldset>
+        	<fieldset>
+            <legend>Сетка:</legend>
+            <ul class="grid-list">
+              <li class="grid-list__item">
+                <input class="radio" id="radio_adaptive" type="radio" name="grid-list" value="adaptive" checked>
+                <label for="radio_adaptive">Адаптивная</label>
+              </li>
+              <li class="grid-list__item">
+                <input class="radio" id="radio_fixed" type="radio" name="grid-list" value="fixed">
+                <label for="radio_fixed">Фиксированная</label>
+              </li>
+              <li class="grid-list__item">
+                <input class="radio" id="radio_responsive" type="radio" name="grid-list" value="responsive">
+                <label for="radio_responsive">Резиновая</label>
+              </li>
+            </ul>  
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul class="features-list">
+              <li class="features-list__item">
+                <input class="checkbox" id="checkbox_slider" type="checkbox" name="checkbox_slider" checked>
+                <label for="checkbox_slider">Слайдер</label>
+              </li>
+              <li class="features-list__item">
+                <input class="checkbox" id="checkbox_advantages" type="checkbox" name="checkbox_advantages">
+                <label for="checkbox_advantages">Блок преимуществ</label>
+              </li>
+              <li class="features-list__item">
+                <input class="checkbox" id="checkbox_news" type="checkbox" name="checkbox_news" checked>
+                <label for="checkbox_news">Новости</label>
+              </li>
+              <li class="features-list__item">
+                <input class="checkbox" id="checkbox_gallery" type="checkbox" name="checkbox_gallery">
+                <label for="checkbox_gallery">Галерея</label>
+              </li>
+              <li class="features-list__item">
+                <input class="checkbox" id="checkbox_cart" type="checkbox" name="checkbox_cart">
+                <label for="checkbox_cart">Корзина</label>
+              </li>
+            </ul>  
+          </fieldset>
+          <button class="button button_wide filters-form__button filters-form__button_submit" type="submit">Показать</button>
+        </form>
+      </section>
+      <section class="catalog">
+      	<h2 class="visually-hidden">Каталог шаблонов</h2>
+      	<div class="sorter">
+	      	<b>Сортировать:</b>
+	      	<ul class="sorter-list">
+	      		<li class="sorter-list__item sorter-list__item_current"><a href="#">По цене</a></li>
+	      		<li class="sorter-list__item"><a href="#">По типу</a></li>
+	      		<li class="sorter-list__item"><a href="#">По названию</a></li>
+	      	</ul>
+	      	<ul class="sorter-controls">
+	      		<li class="sorter-controls__item sorter-controls__item_down sorter-controls__item_current"><a href="#">Сверху вниз</a></li>
+	      		<li class="sorter-controls__item sorter-controls__item_up"><a href="#">Снизу вверх</a></li>
+	      	</ul>
+	      </div>
+      	<ul class="catalog-list">
+      		<li class="catalog-list__item">
+      			<div class="catalog-list__item-info">
+      				<h3>Sedona</h3>
+      				<p>Информационный сайт для туристов</p>
+      				<a class="button buton_red button_wide catalog-list__item-button catalog-list__item-button_buy" href="#">
+      					<span class="catalog-list__item-price">9 900</span> руб.
+      				</a>
+      			</div>
+      			<div class="catalog-list__item-view">
+      				<img class="catalog-list__item-image" src="../images/shop/sedona.jpg" width="360" height="576" alt="Шаблон «Sedona»">
+      			</div>
+      		</li>
+      		<li class="catalog-list__item">
+      			<div class="catalog-list__item-info">
+      				<h3>Pink</h3>
+      				<p>Продуктовый лендинг приложения для iOS и&nbsp;Android</p>
+      				<a class="button buton_red button_wide catalog-list__item-button catalog-list__item-button_buy" href="#">
+      					<span class="catalog-list__item-price">9 900</span> руб.
+      				</a>
+      			</div>
+      			<div class="catalog-list__item-view">
+      				<img class="catalog-list__item-image" src="../images/shop/pink.jpg" width="360" height="576" alt="Шаблон «Pink»">
+      			</div>
+      		</li>
+      		<li class="catalog-list__item">
+      			<div class="catalog-list__item-info">
+      				<h3>Barbershop</h3>
+      				<p>Сайт салона красоты. Для мужчин, да.</p>
+      				<a class="button buton_red button_wide catalog-list__item-button catalog-list__item-button_buy" href="#">
+      					<span class="catalog-list__item-price">9 900</span> руб.
+      				</a>
+      			</div>
+      			<div class="catalog-list__item-view">
+      				<img class="catalog-list__item-image" src="../images/shop/barbershop.jpg" width="360" height="576" alt="Шаблон «Barbershop»">
+      			</div>
+      		</li>
+      		<li class="catalog-list__item">
+      			<div class="catalog-list__item-info">
+      				<h3>Mishka</h3>
+      				<p>Интернет-магазин вязаных игрушек</p>
+      				<a class="button buton_red button_wide catalog-list__item-button catalog-list__item-button_buy" href="#">
+      					<span class="catalog-list__item-price">9 900</span> руб.
+      				</a>
+      			</div>
+      			<div class="catalog-list__item-view">
+      				<img class="catalog-list__item-image" src="../images/shop/mishka.jpg" width="360" height="576" alt="Шаблон «Mishka»">
+      			</div>
+      		</li>
+      		<li class="catalog-list__item">
+      			<div class="catalog-list__item-info">
+      				<h3>A Plus</h3>
+      				<p>Лендинг курсов повышения квалификации</p>
+      				<a class="button buton_red button_wide catalog-list__item-button catalog-list__item-button_buy" href="#">
+      					<span class="catalog-list__item-price">9 900</span> руб.
+      				</a>
+      			</div>
+      			<div class="catalog-list__item-view">
+      				<img class="catalog-list__item-image" src="../images/shop/aplus.jpg" width="360" height="576" alt="Шаблон «A Plus»">
+      			</div>
+      		</li><li class="catalog-list__item">
+      			<div class="catalog-list__item-info">
+      				<h3>Kvast</h3>
+      				<p>Промо-сайт производителя крафтового кваса</p>
+      				<a class="button buton_red button_wide catalog-list__item-button catalog-list__item-button_buy" href="#">
+      					<span class="catalog-list__item-price">9 900</span> руб.
+      				</a>
+      			</div>
+      			<div class="catalog-list__item-view">
+      				<img class="catalog-list__item-image" src="../images/shop/kvast.jpg" width="360" height="576" alt="Шаблон «Kvast»">
+      			</div>
+	      	</li>
+      	</ul>
+      	<ul class="pagination-list">
+	        <li class="pagination-list__item pagination-list__item_current"><a class="button button_pagination" href="#">1</a></li>
+	        <li class="pagination-list__item"><a class="button button_pagination">2</a></li>
+	        <li class="pagination-list__item"><a class="button button_pagination" href="#">3</a></li>
+	        <li class="pagination-list__item"><a class="button button_wide" href="#">Следующая</a></li>
+	      </ul>
+      </section>
+		</div>
+	</main>
+	<footer class="main-footer">
+		<div class="container">
+			<h2 class="visually-hidden">Контакты</h2>
+			<img class="map" src="../images/map/map-with-marker.jpg" width="1440" height="416" alt="Адрес дизайн-студии: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+			<section class="contacts">
+				<h3>Nёrds Design Studio</h3>
+				<p>191186, Санкт-Петербург,<br> 
+				ул. Б. Конюшенная, д. 19/8</p>
+				<p>тел. +7 (812) 275-75-75</p>
+				<a class="button buton_red button_wide" href="#">Напишите нам</a>
+			</section>
+			<ul class="socials-list">
+				<li class="socials-list__item"><a href="#">Вконтакте</a></li>
+				<li class="socials-list__item"><a href="#">Фейсбук</a></li>
+				<li class="socials-list__item"><a href="#">Инстаграм</a></li>
+			</ul>
+			<b>Давайте дружить, это выгодно!</b>
+			<p>Скидка&nbsp;10% для друзей из&nbsp;социальных сетей.</p>
+		</div>
+	</footer>
+	<section class="popup popup_feedback">
+		<h2 class="visually-hidden">Форма обратной связи</h2>
+		<b>Напишите нам</b>
+		<form class="feedback-form" name="feedback-form" method="post" action="#">
+			<p><label for="feedback-form__name">Ваше имя:</label></p>
+			<input class="feedback-form__field" id="feedback-form__name" type="text" name="feedback-form__name" placeholder="Имя Фамилия">
+			<p><label for="feedback-form__email">Ваш e-mail:</label></p>
+			<input class="feedback-form__field" id="feedback-form__email" type="email" name="feedback-form__email" placeholder="email@example.com">
+			<p><label for="feedback-form__text">Текст письма:</label></p>
+			<textarea class="feedback-form__textarea" id="feedback-form__text" name="feedback-form__text" placeholder="В свободной форме"></textarea>
+			<p><button class="buton_red buton_red button_wide feedback-form__button feedback-form__button_submit" type="submit">Отправить</button></p>
+		</form>
+		<button class="popup__close-button" type="button">Закрыть</button>
+	</section>
 </body>
 </html>
