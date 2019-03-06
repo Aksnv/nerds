@@ -1,4 +1,4 @@
 # nerds
 Nerds (HTML Academy)
-- Fixed layout
+- fixed layout
 - HTML5, CSS3, JS, SVG, flexbox
