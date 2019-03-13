@@ -88,27 +88,33 @@
 			</section>
 			<section class="about-us">
 				<h2 class="visually-hidden">О дизайн-студии</h2>
-				<b>Мы&nbsp;&mdash; маленькая, но&nbsp;гордая дизайн-студия из&nbsp;Краснодара.</b>
-				<p>Исповедуем принципы минимализма и&nbsp;чистоты. Ставим математический расчет превыше креатива. Работаем не&nbsp;покладая рук, как роботы.</p>
-				<p>Выполняем заказы на&nbsp;разработку:</p>
-				<ul class="about-us__orders-list">
-					<li class="about-us__orders-item">Веб-сайтов любой сложности</li>
-					<li class="about-us__orders-item">Мобильных приложений для iOS и&nbsp;Android</li>
-					<li class="about-us__orders-item">Слайдшоу и&nbsp;видео для корпоративных презентаций</li>
-				</ul>
-				<p>С&nbsp;2004 года любим точность во&nbsp;всем:</p>
-				<table class="about-us__statistics">
-					<tr>
-						<td>146<sup>%</sup></td>
-						<td>100<sup>%</sup></td>
-						<td>50<sup>%</sup></td>
-					</tr>
-					<tr>
-						<td>Уровень самоотдачи</td>
-						<td>Соблюдение сроков</td>
-						<td>Минимальная предоплата</td>
-					</tr>
-				</table>
+				<div class="columns-wrapper columns-wrapper_about-us">
+					<div class="column column_left">
+						<b>Мы&nbsp;&mdash; маленькая, но&nbsp;гордая дизайн-студия из&nbsp;Краснодара.</b>
+						<p>Исповедуем принципы минимализма и&nbsp;чистоты. Ставим математический расчет превыше креатива. Работаем не&nbsp;покладая рук, как роботы.</p>
+						<p>Выполняем заказы на&nbsp;разработку:</p>
+						<ul class="about-us__orders-list">
+							<li class="about-us__orders-item">Веб-сайтов любой сложности</li>
+							<li class="about-us__orders-item">Мобильных приложений для iOS и&nbsp;Android</li>
+							<li class="about-us__orders-item">Слайдшоу и&nbsp;видео для корпоративных презентаций</li>
+						</ul>
+					</div>
+					<div class="column column_right">
+						<p>С&nbsp;2004 года любим точность во&nbsp;всем:</p>
+						<table class="about-us__statistics">
+							<tr>
+								<td>146<sup>%</sup></td>
+								<td>100<sup>%</sup></td>
+								<td>50<sup>%</sup></td>
+							</tr>
+							<tr>
+								<td>Уровень самоотдачи</td>
+								<td>Соблюдение сроков</td>
+								<td>Минимальная предоплата</td>
+							</tr>
+						</table>
+					</div>
+				</div>
 			</section>
 			<section class="clients">
 				<h2 class="visually-hidden">Наши клиенты</h2>
@@ -138,24 +144,34 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-		<div class="container">
-			<h2 class="visually-hidden">Контакты</h2>
-			<img class="map" src="images/map/map-with-marker.jpg" width="1440" height="416" alt="Адрес дизайн-студии: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-			<section class="contacts">
-				<h3>Nёrds Design Studio</h3>
-				<p>191186, Санкт-Петербург,<br> 
-				ул. Б. Конюшенная, д. 19/8</p>
-				<p>тел. +7 (812) 275-75-75</p>
-				<a class="button buton_red button_wide" href="#">Напишите нам</a>
-			</section>
-			<ul class="socials-list">
-				<li class="socials-list__item"><a href="#">Вконтакте</a></li>
-				<li class="socials-list__item"><a href="#">Фейсбук</a></li>
-				<li class="socials-list__item"><a href="#">Инстаграм</a></li>
-			</ul>
-			<b>Давайте дружить, это выгодно!</b>
-			<p>Скидка&nbsp;10% для друзей из&nbsp;социальных сетей.</p>
-		</div>
+		<h2 class="visually-hidden">Контакты</h2>
+		<section class="map">
+			<img class="map__image" src="images/map/map-with-marker.jpg" width="1440" height="416" alt="Адрес дизайн-студии: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+			<div class="container">
+				<div class="map__contacts">
+					<h3>Nёrds Design Studio</h3>
+					<p>191186, Санкт-Петербург,<br> 
+					ул. Б. Конюшенная, д. 19/8</p>
+					<p>тел. +7 (812) 275-75-75</p>
+					<a class="button buton_red button_wide" href="#">Напишите нам</a>
+				</div>
+			</div>
+		</section>
+		<section class="socials container">
+			<div class="columns-wrapper columns-wrapper_socials">
+				<div class="column column_left">
+					<ul class="socials-list">
+						<li class="socials-list__item"><a href="#">Вконтакте</a></li>
+						<li class="socials-list__item"><a href="#">Фейсбук</a></li>
+						<li class="socials-list__item"><a href="#">Инстаграм</a></li>
+					</ul>
+				</div>
+				<div class="column column_right">
+					<b>Давайте дружить, это выгодно!</b>
+					<p>Скидка&nbsp;10% для друзей из&nbsp;социальных сетей.</p>
+				</div>
+			</div>
+		</section>
 	</footer>
 	<section class="popup popup_feedback">
 		<h2 class="visually-hidden">Форма обратной связи</h2>
