@@ -493,7 +493,8 @@ input[type="radio"].visually-hidden {
 }
 
 .services::after,
-.about-us::after {
+.about-us::after,
+.clients::after {
   content: "";
 
   position: absolute;
@@ -678,10 +679,20 @@ input[type="radio"].visually-hidden {
   display: -o-flex;
   display: flex;
   align-items: center;
+  height: 184px;
 }
 
 .clients-list__logo {
-  display: block;
+  opacity: 0.2;
+}
+
+.clients-list__logo:hover,
+.clients-list__logo:focus {
+  opacity: 1;
+}
+
+.clients-list__logo:active {
+  opacity: 0.1;
 }
 
 
@@ -850,6 +861,13 @@ input[type="radio"]:disabled + label {
 
 .pagination__item:lat-child {
   margin-right: 0;
+}
+
+
+/* ------------- Footer ------------- */
+
+.main-footer {
+  padding-top: 50px;
 }
 
 
