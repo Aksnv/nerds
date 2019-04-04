@@ -142,7 +142,7 @@ input[type="radio"].visually-hidden {
   padding: 0 160px;
 }
 
-.menu-list {
+.main-menu__items {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -154,11 +154,11 @@ input[type="radio"].visually-hidden {
   list-style-type: none;
 }
 
-.menu-list__item {
+.main-menu__item {
   margin-right: 45px;
 }
 
-.menu-list__item:last-child {
+.main-menu__item:last-child {
   margin-right: 0;
 }
 
@@ -179,7 +179,7 @@ input[type="radio"].visually-hidden {
 
 /* Main content - Index */
 
-.slider-list,
+.slider-view,
 .slider-pagination,
 .services-list,
 .clients-list,
@@ -216,11 +216,11 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-.columns-wrapper_about-us .column_left {
+.about-us__description {
   width: 660px;
 }
 
-.columns-wrapper_about-us .column_right {
+.about-us__statistics {
   width: 360px;
 }
 
