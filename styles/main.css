@@ -419,6 +419,7 @@ input[type="radio"].visually-hidden {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
+  color: #000000;
 }
 
 .slider-view__text {
@@ -491,7 +492,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 82px;
 }
 
-.services::after {
+.services::after,
+.about-us::after {
   content: "";
 
   position: absolute;
@@ -537,6 +539,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .services-list__item img {
@@ -559,15 +562,101 @@ input[type="radio"].visually-hidden {
 /* ------------- Main content - About us ------------- */
 
 .about-us {
-  padding-top: 80px;
+  padding-bottom: 50px;
 }
 
 .about-us__description {
   width: 660px;
+  padding-top: 74px;
+}
+
+.about-us__header {
+  display: block;
+  margin-bottom: 32px;
+
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+  color: #000000;
+}
+
+.about-us__text {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.about-us__text_bold {
+  margin-bottom: 24px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.about-us__orders-items {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.about-us__orders-item {
+  position: relative;
+
+  margin-bottom: 24px;
+  padding-left: 36px;
+}
+
+.about-us__orders-item::before {
+  content: "";
+
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  display: block;
+  width: 25px;
+  height: 2px;
+
+  background-color: #fb565a;
 }
 
 .about-us__statistic {
   width: 360px;
+  padding-top: 284px;
+
+  background-image: url("../images/nerds-illustration.jpg");
+  background-position: left 40px;
+  background-repeat: no-repeat;
+}
+
+.about-us__statistic .about-us__text_bold {
+  margin-bottom: 40px;
+
+  text-align: center;
+}
+
+.about-us__statistic-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.about-us__statistic-table td {
+  padding: 16px 0;
+
+  line-height: 18px;
+}
+
+.about-us__statistic-number {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  color: #000000;
+}
+
+.about-us__statistic-number sup {
+  font-size: 28px;
 }
 
 
