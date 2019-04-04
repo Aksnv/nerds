@@ -25,15 +25,16 @@
        url(../fonts/web/ptsansnarrowbold.woff) format("woff");
 }*/
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 html {
   box-sizing: border-box;
 }
 
-body {  
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -56,8 +57,9 @@ body {
 }
 
 img {
-  display: block;
+  /*display: block;*/
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -79,7 +81,9 @@ button {
   border: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -87,8 +91,11 @@ button {
   margin: -1px;
   padding: 0;
 
+  white-space: nowrap;
+
   border: 0;
 
+  clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
