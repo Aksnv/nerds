@@ -441,12 +441,11 @@ input[type="radio"].visually-hidden {
 
 /* ------------- Main content - Shop ------------- */
 
-.grid-list,
-.features-list,
+.filters-form__list,
 .sorter-list,
 .sorter-controls,
 .catalog-list,
-.pagination-list {
+.pagination {
   margin: 0;
   padding: 0;
 
@@ -457,7 +456,7 @@ input[type="radio"].visually-hidden {
   width: 260px;
 }
 
-.filters fieldset {
+.filters-form__fieldset {
   border: none;
 }
 
@@ -470,8 +469,8 @@ input[type="radio"].visually-hidden {
   justify-content: flex-end;
 }
 
-.sorter-header {
-  width: 160px;
+.sorter-legend {
+  max-width: 260px;
   margin-right: auto;
 }
 
@@ -481,7 +480,7 @@ input[type="radio"].visually-hidden {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  width: 280px;
+  max-width: 380px;
 }
 
 .sorter-controls {
@@ -511,7 +510,7 @@ input[type="radio"].visually-hidden {
   width: 360px;
 }
 
-.pagination-list {
+.pagination {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -519,16 +518,14 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.pagination-list__item {
+.pagination__item {
   margin-right: 10px;
 }
 
-.pagination-list__item:lat-child {
+.pagination__item:lat-child {
   margin-right: 0;
 }
 
-
-/* ------------- Footer ------------- */
 
 /* ------------- Footer - Map ------------- */
 
@@ -596,9 +593,9 @@ input[type="radio"].visually-hidden {
 
 /* ------------- Popup ------------- */
 
-.popup {
+/*.popup {
   display: none;
-}
+}*/
 
 .popup_visible {
   display: block;

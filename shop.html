@@ -46,7 +46,7 @@
   			<section class="filters">
           <h2 class="visually-hidden">Фильтр шаблонов</h2>
           <form class="filters-form" name="filters-form" method="post" action="https://echo.htmlacademy.ru">
-          	<fieldset>
+          	<fieldset class="filters-form__fieldset">
               <legend class="filters-form__legend">Стоимость:</legend>
                 <input class="filters-form__field filters-form__field_range" type="range" name="price-range" min="0" max="15000" step="1000" value="10000">
                 <p class="filters-form__price">
@@ -58,7 +58,7 @@
                   </span>
                 </p>
             </fieldset>
-          	<fieldset>
+          	<fieldset class="filters-form__fieldset">
               <legend class="filters-form__legend">Сетка:</legend>
               <ul class="filters-form__list">
                 <li class="filters-form__item">
@@ -84,7 +84,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filters-form__fieldset">
               <legend class="filters-form__legend">Особенности:</legend>
               <ul class="filters-form__list">
                 <li class="filters-form__item">
@@ -130,11 +130,11 @@
         <section class="catalog">
         	<h2 class="visually-hidden">Каталог шаблонов</h2>
         	<div class="sorter">
-  	      	<b class="sorter-header">Сортировать:</b>
+  	      	<b class="sorter-legend">Сортировать:</b>
   	      	<ul class="sorter-list">
-  	      		<li class="sorter-list__item sorter-list__item_current"><a href="#">По цене</a></li>
-  	      		<li class="sorter-list__item"><a href="#">По типу</a></li>
-  	      		<li class="sorter-list__item"><a href="#">По названию</a></li>
+  	      		<li class="sorter-list__item sorter-list__item_price sorter-list__item_current"><a href="#">По цене</a></li>
+  	      		<li class="sorter-list__item sorter-list__item_type"><a href="#">По типу</a></li>
+  	      		<li class="sorter-list__item sorter-list__item_name"><a href="#">По названию</a></li>
   	      	</ul>
   	      	<ul class="sorter-controls">
   	      		<li class="sorter-controls__item sorter-controls__item_down sorter-controls__item_current"><a href="#">Сверху вниз</a></li>
