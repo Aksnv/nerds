@@ -593,10 +593,53 @@ input[type="radio"].visually-hidden {
 
 /* ------------- Popup ------------- */
 
-/*.popup {
-  display: none;
-}*/
+.popup {
+  /*display: none;*/
+
+  width: 960px;
+  padding: 80px 100px;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
 
 .popup_visible {
   display: block;
 }
+
+.feedback-form__fieldset {
+  border: none;
+}
+
+.feedback-form__list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.feedback-form__item {
+  width: 360px;
+}
+
+.feedback-form__item_wide {
+  width: 100%;
+}
+
+.feedback-form__label {
+  display: block;
+}
+
+

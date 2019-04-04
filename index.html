@@ -186,22 +186,22 @@
 			</div>
 		</section>
 	</footer>
-	<section class="popup popup_feedback">
+	<section class="popu">
 		<h2 class="visually-hidden">Форма обратной связи</h2>
     <form class="feedback-form" name="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-      <fieldset>
-        <legend>Напишите нам</legend>
+      <fieldset class="feedback-form__fieldset">
+        <legend class="feedback-form__legend">Напишите нам</legend>
         <ul class="feedback-form__list">
           <li class="feedback-form__item">
-            <label for="feedback-form__name">Ваше имя:</label>
+            <label class="feedback-form__label" for="feedback-form__name">Ваше имя:</label>
             <input class="feedback-form__field" id="feedback-form__name" type="text" name="feedback-form__name" placeholder="Имя Фамилия">
           </li>
           <li class="feedback-form__item">
-            <label for="feedback-form__email">Ваш e-mail:</label>
+            <label class="feedback-form__label" for="feedback-form__email">Ваш e-mail:</label>
             <input class="feedback-form__field" id="feedback-form__email" type="email" name="feedback-form__email" placeholder="email@example.com">
           </li>
           <li class="feedback-form__item feedback-form__item_wide">
-            <label for="feedback-form__text">Текст письма:</label>
+            <label class="feedback-form__label" for="feedback-form__text">Текст письма:</label>
             <textarea class="feedback-form__field feedback-form__field_textarea" id="feedback-form__text" name="feedback-form__text" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
