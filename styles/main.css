@@ -83,47 +83,88 @@ button {
 }
 
 .button {
-  font: inherit;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: #000000;
-
-  background-color: #f1f1f1;
-  border: none;
-}
-
-/*.button {
+  display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
   display: -o-inline-flex;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  width: 140px;
-  padding: 10px;
+  padding: 16px 20px;
 
   font: inherit;
-  line-height: 24px;
-  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
   word-break: break-all;
   color: #ffffff;
 
-  background-color: #000000;
   border: none;
+  border-radius: 3px;
 }
 
-.button:hover,
-.button:active,
-.button:focus {
-  background-color: #673d15;
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  -webkit-box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
+.button_grey {
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+.button_grey:hover,
+.button_grey:focus {
+  background-color: #dfdfdf;
+}
+
+.button_grey:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #d5d5d5;
+}
+
+.button_red {
+  background-color: #fb565a;
+}
+
+.button_red:hover,
+.button_red:focus {
+  background-color: #e74246;
+}
+
+.button_red:active {
+  background-color: #d7373b;
+}
+
+.button_green {
+  background-color: #00ca74;
+}
+
+.button_green:hover,
+.button_green:focus {
+  background-color: #00bc6c;
+}
+
+.button_green:active {
+  background-color: #00aa62;
+}
+
+.button_yellow {
+  background-color: #efc84a;
+}
+
+.button_yellow:hover,
+.button_yellow:focus {
+  background-color: #eab534;
+}
+
+.button_yellow:active {
+  background-color: #e5a722;
 }
 
 .button:disabled,
@@ -137,108 +178,32 @@ button {
 }
 
 .button_disabled:focus {
-  background-color: #000000;
-
   outline: none;
 }
 
-.button:disabled:hover,
-.button_disabled:hover {
-  background-color: #000000;
+.button_grey:disabled:hover,
+.button_grey.button_disabled:hover,
+.button_grey.button_disabled:focus {
+  background-color: #eeeeee;
 }
 
-.button_red {
-  width: 100%;
+.button_red:disabled:hover,
+.button_red.button_disabled:hover,
+.button_red.button_disabled:focus {
+  background-color: #fb565a;
 }
 
-.button_green {
-  width: 43px;
+.button_green:disabled:hover,
+.button_green.button_disabled:hover,
+.button_green.button_disabled:focus {
+  background-color: #00ca74;
 }
 
-.button_yellow {
-  width: 43px;
-}*/
-
-
-/*.indicator {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: block;
-  width: 20px;
-  height: 20px;
-
-  background-color: #f9f6f3;
-  border: 2px solid #000000;
+.button_yellow:disabled:hover,
+.button_yellow.button_disabled:hover,
+.button_yellow.button_disabled:focus {
+  background-color: #efc84a;
 }
-
-.indicator_checkbox {
-  border-radius: 0;
-}
-
-.indicator_radio {
-  border-radius: 50%;
-}
-
-input[type="checkbox"]:checked + label .indicator_checkbox::before,
-input[type="checkbox"]:checked + label .indicator_checkbox::after {
-  content: "";
-
-  position: absolute;
-  top: 6px;
-  left: 1px;
-
-  display: block;
-  width: 14px;
-  height: 3px;
-
-  background-color: #000000;
-}
-
-input[type="checkbox"]:checked + label .indicator_checkbox::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-input[type="checkbox"]:checked + label .indicator_checkbox::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-input[type="radio"]:checked + label .indicator_radio::before {
-  content: "";
-
-  position: absolute;
-  top: 4px;
-  left: 4px;
-
-  display: block;
-  width: 8px;
-  height: 8px;
-
-  background-color: #000000;
-  border-radius: 50%;
-}
-
-input[type="checkbox"]:focus + label .indicator,
-input[type="radio"]:focus + label .indicator {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-input[type="checkbox"]:disabled + label,
-input[type="radio"]:disabled + label {
-  color: #000000;
-
-  opacity: 0.3;
-
-  cursor: default;
-}*/
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -259,10 +224,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
-
-/*legend.visually-hidden {
-  display: block;
-}*/
 
 
 /* ------------- Header ------------- */
@@ -459,6 +420,86 @@ input[type="radio"].visually-hidden {
 .filters-form__fieldset {
   border: none;
 }
+
+/*.indicator {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.indicator_checkbox {
+  border-radius: 0;
+}
+
+.indicator_radio {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + label .indicator_checkbox::before,
+input[type="checkbox"]:checked + label .indicator_checkbox::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 1px;
+
+  display: block;
+  width: 14px;
+  height: 3px;
+
+  background-color: #000000;
+}
+
+input[type="checkbox"]:checked + label .indicator_checkbox::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked + label .indicator_checkbox::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="radio"]:checked + label .indicator_radio::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:focus + label .indicator,
+input[type="radio"]:focus + label .indicator {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+  color: #000000;
+
+  opacity: 0.3;
+
+  cursor: default;
+}*/
 
 .sorter {
   display: -webkit-flex;
