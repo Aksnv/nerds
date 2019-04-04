@@ -63,7 +63,7 @@ body {
 .container {
   position: relative;
 
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -229,14 +229,6 @@ input[type="radio"].visually-hidden {
 /* ------------- Header ------------- */
 
 .main-header {
-  min-height: 114px;
-
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #000000;
-
   background-color: #eeeeee;
 }
 
@@ -246,25 +238,66 @@ input[type="radio"].visually-hidden {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-header__link {
+  position: relative;
+
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.main-header__link:hover,
+.main-header__link:focus {
+  color: #fb565a;
+}
+
+.main-header__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header__link_current::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background-color: #fb565a;
 }
 
 .logo {
   width: 160px;
   height: 65px;
-  padding-top: 49px;
-
-  color: #000000;
+  margin-top: 49px;
+  margin-right: 202px;
 }
 
-.logo img {
-  width: 160px;
-  height: 65px;
+.logo_inner:hover path,
+.logo_inner:focus path {
+  fill: rgba(0, 0, 0, 0.8);
+}
+
+.logo_inner:active path {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .main-menu {
-  max-width: 760px;
-  padding-top: 80px;
+  max-width: 600px;
+  margin-top: 75px;
 }
 
 .main-menu__items {
@@ -273,6 +306,11 @@ input[type="radio"].visually-hidden {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -280,22 +318,34 @@ input[type="radio"].visually-hidden {
 }
 
 .main-menu__item {
-  margin-right: 45px;
+  margin-right: 46px;
 }
 
 .main-menu__item:last-child {
   margin-right: 0;
 }
 
-.main-menu__link {
-  color: #000000;
-}
-
 .cart {
   max-width: 160px;
-  padding-top: 80px;
+  margin-top: 75px;
+  margin-left: auto;
+  padding-left: 40px;
+}
 
-  color: #000000;
+.cart::before {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: 0;
+
+  display: block;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../images/icons/cart-icon.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
 
