@@ -72,14 +72,14 @@
                   </label>
                 </li>
                 <li class="filters-form__item">
-                  <input class="filters-form__field filters-form__field_radio visually-hidden" id="radio_fixed" type="radio" name="grid-list" value="fixed">
+                  <input class="filters-form__field filters-form__field_radio visually-hidden" id="radio_fixed" type="radio" name="grid-list" value="fixed" disabled>
                   <label class="filters-form__label" for="radio_fixed">
                     <span class="indicator indicator_radio filters-form__indicator"></span>
                     Фиксированная
                   </label>
                 </li>
                 <li class="filters-form__item">
-                  <input class="filters-form__field filters-form__field_radio visually-hidden" id="radio_responsive" type="radio" name="grid-list" value="responsive">
+                  <input class="filters-form__field filters-form__field_radio visually-hidden" id="radio_responsive" type="radio" name="grid-list" value="responsive" checked disabled>
                   <label class="filters-form__label" for="radio_responsive">
                     <span class="indicator indicator_radio filters-form__indicator"></span>
                     Резиновая
@@ -98,14 +98,14 @@
                   </label>
                 </li>
                 <li class="filters-form__item">
-                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" id="advantages" type="checkbox" name="advantages">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" id="advantages" type="checkbox" name="advantages" disabled>
                   <label class="filters-form__label" for="advantages">
                     <span class="indicator indicator_checkbox filters-form__indicator"></span>
                     Блок преимуществ
                   </label>
                 </li>
                 <li class="filters-form__item">
-                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" id="news" type="checkbox" name="news" checked>
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" id="news" type="checkbox" name="news" checked disabled>
                   <label class="filters-form__label" for="news">
                     <span class="indicator indicator_checkbox filters-form__indicator"></span>
                     Новости
@@ -135,13 +135,27 @@
         	<div class="sorter">
   	      	<b class="sorter-legend">Сортировать:</b>
   	      	<ul class="sorter-list">
-  	      		<li class="sorter-list__item sorter-list__item_price sorter-list__item_current"><a href="#">По цене</a></li>
-  	      		<li class="sorter-list__item sorter-list__item_type"><a href="#">По типу</a></li>
-  	      		<li class="sorter-list__item sorter-list__item_name"><a href="#">По названию</a></li>
+  	      		<li class="sorter-list__item sorter-list__item_price">
+                <a class="sorter-list__button sorter-list__button_current">По цене</a>
+              </li>
+  	      		<li class="sorter-list__item sorter-list__item_type">
+                <a class="sorter-list__button" href="#">По типу</a>
+              </li>
+  	      		<li class="sorter-list__item sorter-list__item_name">
+                <a class="sorter-list__button" href="#">По названию</a>
+              </li>
   	      	</ul>
   	      	<ul class="sorter-controls">
-  	      		<li class="sorter-controls__item sorter-controls__item_down sorter-controls__item_current"><a href="#">Сверху вниз</a></li>
-  	      		<li class="sorter-controls__item sorter-controls__item_up"><a href="#">Снизу вверх</a></li>
+  	      		<li class="sorter-controls__item">
+                <a class="sorter-controls__button sorter-controls__button_down sorter-controls__button_current">
+                  <span class="visually-hidden">Сверху вниз</span>
+                </a>
+              </li>
+  	      		<li class="sorter-controls__item">
+                <a class="sorter-controls__button sorter-controls__button_up" href="#">
+                  <span class="visually-hidden">Снизу вверх</span>
+                </a>
+              </li>
   	      	</ul>
   	      </div>
         	<ul class="catalog-list catalog-list_price_down">
@@ -149,7 +163,7 @@
               <img src="images/shop/sedona.jpg" width="360" height="576" alt="Шаблон «Sedona»">
         			<div class="catalog-list__info">
         				<a class="catalog-list__link" href="#"><h3>Sedona</h3></a>
-        				<p  class="catalog-list__text">Информационный сайт для туристов</p>
+        				<p  class="catalog-list__text">Информационный сайт<br> для туристов</p>
         				<a class="button button_red catalog-list__button" href="#">
         					<span class="catalog-list__price">9 900</span> руб.
         				</a>
@@ -169,7 +183,7 @@
               <img src="images/shop/barbershop.jpg" width="360" height="576" alt="Шаблон «Barbershop»">
         			<div class="catalog-list__info">
         				<a class="catalog-list__link" href="#"><h3>Barbershop</h3></a>
-        				<p class="catalog-list__text">Сайт салона красоты. Для мужчин, да.</p>
+        				<p class="catalog-list__text">Сайт салона красоты.<br> Для мужчин, да.</p>
         				<a class="button button_red catalog-list__button" href="#">
         					<span class="catalog-list__price">9 900</span> руб.
         				</a>
@@ -207,16 +221,16 @@
         	</ul>
         	<ul class="pagination">
   	        <li class="pagination__item">
-              <a class="button pagination__link pagination__link_current">1</a>
+              <a class="button button_grey pagination__link pagination__link_current">1</a>
             </li>
   	        <li class="pagination__item">
-              <a class="button pagination__link">2</a>
+              <a class="button button_grey pagination__link">2</a>
             </li>
   	        <li class="pagination__item">
-              <a class="button pagination__link" href="#">3</a>
+              <a class="button button_grey pagination__link" href="#">3</a>
             </li>
   	        <li class="pagination__item">
-              <a class="button pagination__link pagination__link_next" href="#">Следующая</a>
+              <a class="button button_grey pagination__link pagination__link_next" href="#">Следующая</a>
             </li>
   	      </ul>
         </section>
