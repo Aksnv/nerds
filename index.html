@@ -220,13 +220,15 @@
           </li>
           <li class="feedback-form__item feedback-form__item_wide">
             <label class="feedback-form__label" for="feedback-form__text">Текст письма:</label>
-            <textarea class="feedback-form__field feedback-form__field_textarea" id="feedback-form__text" name="feedback-form__text" placeholder="В свободной форме"></textarea>
+            <textarea class="feedback-form__field feedback-form__field_wide feedback-form__field_textarea" id="feedback-form__text" name="feedback-form__text" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
       </fieldset>
 		  <button class="button button_red feedback-form__button feedback-form__button_submit" type="submit">Отправить</button>
 		</form>
-		<button class="popup__close-button" type="button">Закрыть</button>
+		<button class="popup__close-button" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
 	</section>
   <div class="overlay"></div>
   <script src="scripts/main.js"></script>
