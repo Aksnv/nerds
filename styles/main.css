@@ -111,6 +111,20 @@ button {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
+.button:disabled,
+.button_disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button_disabled {
+  pointer-events: none;
+}
+
+.button_disabled:focus {
+  outline: none;
+}
+
 .button_wide {
   width: 100%;
 }
@@ -132,6 +146,12 @@ button {
   background-color: #d5d5d5;
 }
 
+.button_grey:disabled:hover,
+.button_grey.button_disabled:hover,
+.button_grey.button_disabled:focus {
+  background-color: #eeeeee;
+}
+
 .button_red {
   background-color: #fb565a;
 }
@@ -143,6 +163,12 @@ button {
 
 .button_red:active {
   background-color: #d7373b;
+}
+
+.button_red:disabled:hover,
+.button_red.button_disabled:hover,
+.button_red.button_disabled:focus {
+  background-color: #fb565a;
 }
 
 .button_green {
@@ -158,6 +184,12 @@ button {
   background-color: #00aa62;
 }
 
+.button_green:disabled:hover,
+.button_green.button_disabled:hover,
+.button_green.button_disabled:focus {
+  background-color: #00ca74;
+}
+
 .button_yellow {
   background-color: #efc84a;
 }
@@ -169,38 +201,6 @@ button {
 
 .button_yellow:active {
   background-color: #e5a722;
-}
-
-.button:disabled,
-.button_disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-.button_disabled {
-  pointer-events: none;
-}
-
-.button_disabled:focus {
-  outline: none;
-}
-
-.button_grey:disabled:hover,
-.button_grey.button_disabled:hover,
-.button_grey.button_disabled:focus {
-  background-color: #eeeeee;
-}
-
-.button_red:disabled:hover,
-.button_red.button_disabled:hover,
-.button_red.button_disabled:focus {
-  background-color: #fb565a;
-}
-
-.button_green:disabled:hover,
-.button_green.button_disabled:hover,
-.button_green.button_disabled:focus {
-  background-color: #00ca74;
 }
 
 .button_yellow:disabled:hover,
@@ -245,49 +245,14 @@ input[type="radio"].visually-hidden {
   align-items: flex-start;
 }
 
-.main-header__link {
-  position: relative;
-
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  display: -o-inline-flex;
-  display: inline-flex;
-
-  line-height: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.main-header__link:hover,
-.main-header__link:focus {
-  color: #fb565a;
-}
-
-.main-header__link:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.main-header__link_current::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-
-  display: block;
-  width: 100%;
-  height: 2px;
-
-  background-color: #fb565a;
+.main-header__logo {
+  margin-top: 49px;
+  margin-right: 202px;
 }
 
 .logo {
   width: 160px;
   height: 65px;
-  margin-top: 49px;
-  margin-right: 202px;
 }
 
 .logo_inner:hover path,
@@ -299,9 +264,12 @@ input[type="radio"].visually-hidden {
   fill: rgba(0, 0, 0, 0.3);
 }
 
+.main-header__menu {
+  margin-top: 75px;
+}
+
 .main-menu {
   max-width: 600px;
-  margin-top: 75px;
 }
 
 .main-menu__items {
@@ -329,10 +297,13 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-.cart {
-  max-width: 160px;
+.main-header__cart {
   margin-top: 75px;
   margin-left: auto;
+}
+
+.cart {
+  max-width: 160px;
   padding-left: 40px;
 }
 
@@ -350,6 +321,56 @@ input[type="radio"].visually-hidden {
   background-image: url("../images/icons/cart-icon.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
+}
+
+.main-menu__link,
+.cart {
+  position: relative;
+
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  padding-bottom: 5px;
+
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: #000000;
+}
+
+.main-menu__link:hover,
+.main-menu__link:focus,
+.cart:hover,
+.cart:focus {
+  color: #fb565a;
+}
+
+.main-menu__link:active,
+.cart:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-menu__link_current::after,
+.cart_current::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background-color: #fb565a;
+}
+
+.main-menu__link_current:active,
+.cart_current:active {
+  color: #fb565a;
 }
 
 
