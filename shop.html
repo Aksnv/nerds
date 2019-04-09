@@ -42,7 +42,7 @@
       <a class="cart main-header__cart" href="#">Корзина</a>
 		</div>
 	</header>
-	<main class="main-content">
+	<main class="main-content main-content_inner">
     <section class="main-content__header">
       <div class="container">
         <h1>Магазин готовых шаблонов</h1>
@@ -137,26 +137,26 @@
         <section class="catalog">
         	<h2 class="visually-hidden">Каталог шаблонов</h2>
         	<div class="sorter">
-  	      	<b class="sorter-legend">Сортировать:</b>
-  	      	<ul class="sorter-list">
-  	      		<li class="sorter-list__item sorter-list__item_price">
-                <a class="sorter-list__button sorter-list__button_current">По цене</a>
+  	      	<b class="sorter__legend">Сортировать:</b>
+  	      	<ul class="sorter__categories">
+  	      		<li class="sorter__categories-item sorter__categories-item_price">
+                <a class="sorter__categories-button sorter__categories-button_current">По цене</a>
               </li>
-  	      		<li class="sorter-list__item sorter-list__item_type">
-                <a class="sorter-list__button" href="#">По типу</a>
+  	      		<li class="sorter__categories-item sorter__categories-item_type">
+                <a class="sorter__categories-button" href="#">По типу</a>
               </li>
-  	      		<li class="sorter-list__item sorter-list__item_name">
-                <a class="sorter-list__button" href="#">По названию</a>
+  	      		<li class="sorter__categories-item sorter__categories-item_name">
+                <a class="sorter__categories-button" href="#">По названию</a>
               </li>
   	      	</ul>
-  	      	<ul class="sorter-controls">
-  	      		<li class="sorter-controls__item">
-                <a class="sorter-controls__button sorter-controls__button_down sorter-controls__button_current">
+  	      	<ul class="sorter__controls">
+  	      		<li class="sorter__controls-item">
+                <a class="sorter__controls-button sorter__controls-button_down sorter__controls-button_current">
                   <span class="visually-hidden">Сверху вниз</span>
                 </a>
               </li>
-  	      		<li class="sorter-controls__item">
-                <a class="sorter-controls__button sorter-controls__button_up" href="#">
+  	      		<li class="sorter__controls-item">
+                <a class="sorter__controls-button sorter__controls-button_up" href="#">
                   <span class="visually-hidden">Снизу вверх</span>
                 </a>
               </li>
@@ -165,76 +165,88 @@
         	<ul class="catalog-list catalog-list_price_down">
         		<li class="catalog-list__item">
               <img src="images/shop/sedona.jpg" width="360" height="576" alt="Шаблон «Sedona»">
-        			<div class="catalog-list__info">
-        				<a class="catalog-list__link" href="#"><h3>Sedona</h3></a>
-        				<p  class="catalog-list__text">Информационный сайт<br> для туристов</p>
-        				<a class="button button_red catalog-list__button" href="#">
-        					<span class="catalog-list__price">9 900</span> руб.
-        				</a>
-        			</div>
+              <div class="catalog-list__info">
+                <a class="catalog-list__link" href="#">
+                  <h3>Sedona</h3>
+                </a>
+                <p  class="catalog-list__text">Информационный сайт<br> для туристов</p>
+                <a class="button button_red catalog-list__button" href="#">
+                  <span class="catalog-list__price">9 900 руб.</span>
+                </a>
+              </div>
         		</li>
         		<li class="catalog-list__item">
               <img src="images/shop/pink.jpg" width="360" height="576" alt="Шаблон «Pink»">
         			<div class="catalog-list__info">
-        				<a class="catalog-list__link" href="#"><h3>Pink</h3></a>
+        				<a class="catalog-list__link" href="#">
+                  <h3>Pink</h3>
+                </a>
         				<p class="catalog-list__text">Продуктовый лендинг приложения для iOS и&nbsp;Android</p>
         				<a class="button button_red catalog-list__button" href="#">
-        					<span class="catalog-list__price">9 900</span> руб.
+        					<span class="catalog-list__price">9 900 руб.</span>
         				</a>
         			</div>
         		</li>
         		<li class="catalog-list__item">
               <img src="images/shop/barbershop.jpg" width="360" height="576" alt="Шаблон «Barbershop»">
         			<div class="catalog-list__info">
-        				<a class="catalog-list__link" href="#"><h3>Barbershop</h3></a>
+        				<a class="catalog-list__link" href="#">
+                  <h3>Barbershop</h3>
+                </a>
         				<p class="catalog-list__text">Сайт салона красоты.<br> Для мужчин, да.</p>
         				<a class="button button_red catalog-list__button" href="#">
-        					<span class="catalog-list__price">9 900</span> руб.
+        					<span class="catalog-list__price">9 900 руб.</span>
         				</a>
         			</div>
         		</li>
         		<li class="catalog-list__item">
               <img src="images/shop/mishka.jpg" width="360" height="576" alt="Шаблон «Mishka»">
         			<div class="catalog-list__info">
-        				<a class="catalog-list__link" href="#"><h3>Mishka</h3></a>
+        				<a class="catalog-list__link" href="#">
+                  <h3>Mishka</h3>
+                </a>
         				<p class="catalog-list__text">Интернет-магазин вязаных игрушек</p>
         				<a class="button button_red catalog-list__button" href="#">
-        					<span class="catalog-list__price">9 900</span> руб.
+        					<span class="catalog-list__price">9 900 руб.</span>
         				</a>
         			</div>
-        		</li>
-        		<li class="catalog-list__item">
+          		</li>
+          		<li class="catalog-list__item">
               <img src="images/shop/aplus.jpg" width="360" height="576" alt="Шаблон «A Plus»">
         			<div class="catalog-list__info">
-        				<a class="catalog-list__link" href="#"><h3>A Plus</h3></a>
+        				<a class="catalog-list__link" href="#">
+                  <h3>A Plus</h3>
+                </a>
         				<p class="catalog-list__text">Лендинг курсов повышения квалификации</p>
         				<a class="button button_red catalog-list__button" href="#">
-        					<span class="catalog-list__price">9 900</span> руб.
+        					<span class="catalog-list__price">9 900 руб.</span>
         				</a>
         			</div>
         		</li><li class="catalog-list__item">
               <img src="images/shop/kvast.jpg" width="360" height="576" alt="Шаблон «Kvast»">
         			<div class="catalog-list__info">
-        				<a class="catalog-list__link" href="#"><h3>Kvast</h3></a>
+        				<a class="catalog-list__link" href="#">
+                  <h3>Kvast</h3>
+                </a>
         				<p class="catalog-list__text">Промо-сайт производителя крафтового кваса</p>
         				<a class="button button_red catalog-list__button" href="#">
-        					<span class="catalog-list__price">9 900</span> руб.
+        					<span class="catalog-list__price">9 900 руб.</span>
         				</a>
         			</div>
   	      	</li>
         	</ul>
         	<ul class="pagination">
   	        <li class="pagination__item">
-              <a class="button button_grey pagination__link pagination__link_current">1</a>
+              <a class="button button_grey pagination__button pagination__button_current">1</a>
             </li>
   	        <li class="pagination__item">
-              <a class="button button_grey pagination__link">2</a>
+              <a class="button button_grey pagination__button" href="#">2</a>
             </li>
   	        <li class="pagination__item">
-              <a class="button button_grey pagination__link" href="#">3</a>
+              <a class="button button_grey pagination__button" href="#">3</a>
             </li>
   	        <li class="pagination__item">
-              <a class="button button_grey pagination__link pagination__link_next" href="#">Следующая</a>
+              <a class="button button_grey pagination__button pagination__button_next" href="#">Следующая</a>
             </li>
   	      </ul>
         </section>
