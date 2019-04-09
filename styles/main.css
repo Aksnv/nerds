@@ -404,7 +404,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-view,
-.slider-pagination,
+.slider-controls,
 .services-list,
 .clients-list,
 .socials-list {
@@ -418,6 +418,10 @@ input[type="radio"].visually-hidden {
 /* ------------- Main content - Slider ------------- */
 
 .slider {
+  position: relative;
+
+  color: #283136;
+
   background-color: #eeeeee;
 }
 
@@ -450,6 +454,7 @@ input[type="radio"].visually-hidden {
 .slider-view__header {
   display: block;
   margin-bottom: 25px;
+  padding-right: 645px;
 
   font-size: 55px;
   font-weight: 500;
@@ -460,13 +465,14 @@ input[type="radio"].visually-hidden {
 .slider-view__text {
   margin: 0;
   margin-bottom: 40px;
+  padding-right: 745px;
 }
 
 .slider-view__button {
   width: 240px;
 }
 
-.slider-pagination {
+.slider-controls {
   position: absolute;
   left: 50%;
   bottom: 96px;
@@ -480,15 +486,15 @@ input[type="radio"].visually-hidden {
   transform: translateX(-50%);
 }
 
-.slider-pagination__item {
+.slider-controls__item {
   margin-right: 17px;
 }
 
-.slider-pagination__item:last-child {
+.slider-controls__item:last-child {
   margin-right: 0;
 }
 
-.slider-pagination__button {
+.slider-controls__button {
   position: relative;
 
   display: block;
@@ -502,7 +508,7 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.slider-pagination__button_current::before {
+.slider-controls__button_current::before {
   content: "";
 
   position: absolute;
