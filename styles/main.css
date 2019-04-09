@@ -773,6 +773,8 @@ input[type="radio"].visually-hidden {
 .clients-list__logo {
   display: block;
 
+  color: #000000;
+
   opacity: 0.2;
 }
 
@@ -1271,7 +1273,7 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   align-items: center;
 
-  /*height: 416px;*/
+  overflow: hidden;
 }
 
 .map .container {
@@ -1289,9 +1291,12 @@ input[type="radio"].visually-hidden {
 
 .map__contacts {
   width: 320px;
+  max-height: 360px;
   padding: 50px;
 
   background-color: #ffffff;
+
+  overflow-y: scroll;
 }
 
 .map__contacts h3 {
@@ -1318,6 +1323,13 @@ input[type="radio"].visually-hidden {
   margin-top: 20px;
 }
 
+.map img {
+  max-width: none;
+  height: 416px;
+
+  background-color: #eeeeee;
+}
+
 
 /* ------------- Footer - Socials ------------- */
 
@@ -1327,7 +1339,7 @@ input[type="radio"].visually-hidden {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  padding-bottom: 70px;
+  padding-bottom: 57px;
 }
 
 .socials-list {
@@ -1348,9 +1360,10 @@ input[type="radio"].visually-hidden {
 
 .socials-list__item {
   margin-right: 13px;
+  margin-bottom: 13px;
 }
 
-.socials-list__item:last-child {
+.socials-list__item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -1383,6 +1396,7 @@ input[type="radio"].visually-hidden {
 }
 
 .socials-discount {
+  max-width: 760px;
   padding-top: 74px;
 }
 
@@ -1398,6 +1412,7 @@ input[type="radio"].visually-hidden {
 
 .socials-discount__text {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 
