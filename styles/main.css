@@ -529,6 +529,8 @@ input[type="radio"].visually-hidden {
 /* ------------- Main content - Services ------------- */
 
 .services {
+  position: relative;
+
   padding-top: 80px;
   padding-bottom: 82px;
 }
@@ -589,6 +591,8 @@ input[type="radio"].visually-hidden {
   width: 300px;
   height: 146px;
   margin-bottom: 25px;
+
+  background-color: #eeeeee;
 }
 
 .services-list__text {
