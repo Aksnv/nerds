@@ -608,6 +608,8 @@ input[type="radio"].visually-hidden {
 /* ------------- Main content - About us ------------- */
 
 .about-us {
+  position: relative;
+
   padding-bottom: 50px;
 }
 
@@ -667,7 +669,7 @@ input[type="radio"].visually-hidden {
   background-color: #fb565a;
 }
 
-.about-us__statistic {
+.about-us__statistics {
   width: 360px;
   padding-top: 284px;
 
@@ -676,32 +678,35 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.about-us__statistic .about-us__text_bold {
+.about-us__statistics .about-us__text_bold {
   margin-bottom: 40px;
 
   text-align: center;
 }
 
-.about-us__statistic-table {
+.about-us__statistics-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
-.about-us__statistic-table td {
+.about-us__statistics-table td {
   padding: 16px 0;
 
   line-height: 18px;
+  vertical-align: top;
 }
 
-.about-us__statistic-number {
+.about-us__statistics-table .about-us__statistics-number {
+  padding: 2px 0;
+
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
   color: #000000;
 }
 
-.about-us__statistic-number sup {
+.about-us__statistics-number sup {
   font-size: 28px;
 }
 
@@ -709,6 +714,8 @@ input[type="radio"].visually-hidden {
 /* ------------- Main content - Clients ------------- */
 
 .container_clients {
+  position: relative;
+
   padding: 0;
 }
 
