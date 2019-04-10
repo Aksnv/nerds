@@ -823,8 +823,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filters-form__fieldset {
-  position: relative;
-
   margin: 0;
   padding: 0;
 
@@ -833,23 +831,6 @@ input[type="radio"].visually-hidden {
 
 .filters-form__fieldset_range {
   margin-bottom: 54px;
-}
-
-.filters-form__fieldset_range::after {
-  content: "";
-
-  position: absolute;
-  bottom: 52px;
-  left: 0;
-
-  display: block;
-  width: 100%;
-  height: 80px;
-
-  background-color: #eeeeee;
-  border-radius: 3px;
-
-  z-index: -1;
 }
 
 .filters-form__fieldset_grid {
@@ -874,27 +855,95 @@ input[type="radio"].visually-hidden {
 }
 
 .filters-form__legend_range {
-  margin-bottom: 78px;
+  margin-bottom: 86px;
 }
 
 .filters-form__field_range {
+  display: block;
   width: 220px;
+  height: 2px;
   margin-left: 20px;
-  margin-bottom: 47px;
+  margin-bottom: 53px;
+
+  background-color: transparent;
+
+  -webkit-appearance: none;
 }
 
-/*.filters-form__field_range {
-  -webkit-appearance: none;
-}*/
-
 .filters-form__field_range::-webkit-slider-runnable-track {
-  border-radius: 10px;
-  height: 10px;
-  border: 1px solid #000;
-  background-color: #ccc;
+  height: 2px;
+
+  background-color: #d7dcde;
+}
+
+.filters-form__field_range::-moz-range-track {
+  height: 2px;
+
+  background-color: #d7dcde;
+}
+
+.filters-form__field_range::-ms-track {
+  height: 2px;
+
+  background-color: #d7dcde;
+}
+
+.filters-form__field_range::-webkit-slider-thumb {
+  width: 20px;
+  height: 23px;
+  margin-top: -9px;
+
+  background-image: url("../images/icons/form/filter-button.svg");
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+}
+
+.filters-form__field_range::-moz-range-thumb {
+  width: 20px;
+  height: 23px;
+  margin-top: -9px;
+
+  background-image: url("../images/icons/form/filter-button.svg");
+  border: none;
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+}
+
+.filters-form__field_range::-ms-thumb {
+  width: 20px;
+  height: 23px;
+  margin-top: -9px;
+
+  background-image: url("../images/icons/form/filter-button.svg");
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+}
+
+.filters-form__field_range::-moz-range-progress {
+  background-color: #00ca74;
+}
+
+.filters-form__field_range::-moz-range-track {
+  background-color: #d7dcde;
+}
+
+.filters-form__field_range::-ms-fill-lower {
+  background-color: #00ca74;
+}
+
+.filters-form__field_range::-ms-fill-upper {
+  background-color: #d7dcde;
 }
 
 .filters-form__price {
+  position: relative;
+
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -905,6 +954,23 @@ input[type="radio"].visually-hidden {
 
   line-height: 22px;
   text-transform: uppercase;
+}
+
+.filters-form__price::before {
+  content: "";
+
+  position: absolute;
+  top: -94px;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 80px;
+
+  background-color: #eeeeee;
+  border-radius: 3px;
+
+  z-index: -1;
 }
 
 .filters-form__field_price {
@@ -1379,7 +1445,7 @@ input[type="radio"].visually-hidden {
   height: 416px;
 }
 
-.map__contacts {
+.contacts {
   width: 320px;
   max-height: 360px;
   padding: 50px;
@@ -1389,7 +1455,7 @@ input[type="radio"].visually-hidden {
   overflow-y: scroll;
 }
 
-.map__contacts h3 {
+.contacts h3 {
   margin: 0;
   margin-bottom: 22px;
 
@@ -1400,7 +1466,7 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.map__text {
+.contacts__text {
   margin: 0;
   margin-bottom: 18px;
 
@@ -1408,7 +1474,7 @@ input[type="radio"].visually-hidden {
   color: #666666;
 }
 
-.map__button {
+.contacts__button {
   width: 220px;
   margin-top: 20px;
 }
@@ -1546,6 +1612,12 @@ input[type="radio"].visually-hidden {
 
 .popup_visible {
   display: block;
+
+  animation: showPopup 2s;
+}
+
+.popup_invalid {
+  animation: shakeForm 2s;
 }
 
 .feedback-form__fieldset {
@@ -1636,7 +1708,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
-.feedback-form__field_textarea {
+.feedback-form__field_text {
   min-height: 118px;
   padding: 10px 14px;
 
@@ -1701,3 +1773,35 @@ input[type="radio"].visually-hidden {
   opacity: 0.1;
 }
 
+
+/* ------------- Animations ------------- */
+
+@keyframes showPopup {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 55%;
+  }
+  50% {
+    top: 45%;
+  }
+  75% {
+    top: 52%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes shakeForm {
+  0%, 100% {
+    left: 50%;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    left: 51%;
+  }
+  20%, 40%, 60%, 80% {
+    left: 49%;
+  }
+}

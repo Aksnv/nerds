@@ -257,12 +257,12 @@
     <section class="map">
       <h2 class="visually-hidden">Контакты и схема проезда</h2>
       <div class="container">
-        <div class="map__contacts">
+        <div class="contacts">
           <h3>Nёrds Design Studio</h3>
-          <p class="map__text">191186, Санкт-Петербург,<br>
+          <p class="contacts__text">191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8</p>
-          <p class="map__text">тел. +7 (812) 275-75-75</p>
-          <a class="button button_red map__button" href="#">Напишите нам</a>
+          <p class="contacts__text">тел. +7 (812) 275-75-75</p>
+          <a class="button button_red contacts__button" href="#">Напишите нам</a>
         </div>
       </div>
       <img class="map__image" src="images/map/map-with-marker.jpg" width="1440" height="416" alt="Адрес дизайн-студии: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
@@ -303,15 +303,15 @@
         <ul class="feedback-form__list">
           <li class="feedback-form__item">
             <label class="feedback-form__label" for="feedback-form__name">Ваше имя:</label>
-            <input class="feedback-form__field" id="feedback-form__name" type="text" name="feedback-form__name" placeholder="Имя Фамилия">
+            <input class="feedback-form__field feedback-form__field_name" id="feedback-form__name" type="text" name="feedback-form__name" placeholder="Имя Фамилия">
           </li>
           <li class="feedback-form__item">
             <label class="feedback-form__label" for="feedback-form__email">Ваш e-mail:</label>
-            <input class="feedback-form__field" id="feedback-form__email" type="email" name="feedback-form__email" placeholder="email@example.com">
+            <input class="feedback-form__field feedback-form__field_email" id="feedback-form__email" type="text" name="feedback-form__email" placeholder="email@example.com">
           </li>
           <li class="feedback-form__item feedback-form__item_wide">
             <label class="feedback-form__label" for="feedback-form__text">Текст письма:</label>
-            <textarea class="feedback-form__field feedback-form__field_wide feedback-form__field_textarea" id="feedback-form__text" name="feedback-form__text" placeholder="В свободной форме"></textarea>
+            <textarea class="feedback-form__field feedback-form__field_wide feedback-form__field_text" id="feedback-form__text" name="feedback-form__text" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
       </fieldset>
@@ -323,5 +323,6 @@
   </section>
   <div class="overlay"></div>
   <script src="scripts/main.js"></script>
+  <script src="scripts/popup.js"></script>
 </body>
 </html>
