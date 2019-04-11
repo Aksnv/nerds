@@ -1870,6 +1870,7 @@ input[type="radio"].visually-hidden {
   height: 21px;
   padding: 0;
 
+  background-color: transparent;
   border: none;
   opacity: 0.3;
 }
