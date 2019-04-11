@@ -88,19 +88,16 @@ feedbackForm.addEventListener("submit", function(e) {
       feedbackFormFields[i].classList.remove("feedback-form__field_invalid");
     }
   }
+  if (!expr.test(feedbackFormFieldEmail.value)) {
+    feedbackFormFieldEmail.classList.add("feedback-form__field_invalid");
+    counter++;
+  }
   if (counter === 0) {
-    if (expr.test(feedbackFormFieldEmail.value)) {
-      if (storage) {
-        localStorage.setItem("name", feedbackFormFieldName.value);
-        localStorage.setItem("email", feedbackFormFieldEmail.value);
-      }
-      feedbackForm.submit();
-    } else {
-      feedbackFormFieldEmail.classList.add("feedback-form__field_invalid");
-      popup.classList.remove("popup_invalid");
-      popup.offsetWidth;
-      popup.classList.add("popup_invalid");
+    if (storage) {
+      localStorage.setItem("name", feedbackFormFieldName.value);
+      localStorage.setItem("email", feedbackFormFieldEmail.value);
     }
+    feedbackForm.submit();
   } else {
     popup.classList.remove("popup_invalid");
     popup.offsetWidth;
@@ -111,5 +108,3 @@ feedbackForm.addEventListener("submit", function(e) {
 loseFocus(feedbackFormFieldName);
 loseFocus(feedbackFormFieldEmail);
 loseFocus(feedbackFormFieldText);
-
-
