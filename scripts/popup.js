@@ -4,7 +4,6 @@
 
 var overlay = document.querySelector(".overlay");
 var popup = document.querySelector(".popup");
-
 var openPopupButton = document.querySelector(".contacts__button");
 var closePopupButton = popup.querySelector(".popup__close-button");
 
@@ -14,7 +13,8 @@ var feedbackFormFieldName = feedbackForm.querySelector(".feedback-form__field_na
 var feedbackFormFieldEmail = feedbackForm.querySelector(".feedback-form__field_email");
 var feedbackFormFieldText = feedbackForm.querySelector(".feedback-form__field_text");
 
-var storage = true;
+var isStorageSupport = true;
+var storage = "";
 
 var expr = /(\w+)@(\w+)\.(\D+)/i;
 
@@ -27,16 +27,16 @@ var loseFocus = function(fieldName) {
 };
 
 try {
-  feedbackFormFieldName.value = localStorage.getItem("name");
-} catch {
-  storage = false;
+  storage = localStorage.getItem("name");
+} catch (err) {
+  isStorageSupport = false;
 }
 
 openPopupButton.addEventListener("click", function(e) {
   e.preventDefault();
   overlay.classList.add("overlay_visible");
   popup.classList.add("popup_visible");
-  if (storage) {
+  if (isStorageSupport) {
     if (localStorage.getItem("name")) {
       feedbackFormFieldName.value = localStorage.getItem("name");
       if (localStorage.getItem("email")) {
@@ -68,8 +68,8 @@ overlay.addEventListener("click", function() {
 
 window.addEventListener("keydown", function(e) {
   if (e.keyCode === 27) {
-    e.preventDefault();
     if (popup.classList.contains("popup_visible")) {
+      e.preventDefault();
       overlay.classList.remove("overlay_visible");
       popup.classList.remove("popup_visible");
       popup.classList.remove("popup_invalid");
@@ -93,7 +93,7 @@ feedbackForm.addEventListener("submit", function(e) {
     counter++;
   }
   if (counter === 0) {
-    if (storage) {
+    if (isStorageSupport) {
       localStorage.setItem("name", feedbackFormFieldName.value);
       localStorage.setItem("email", feedbackFormFieldEmail.value);
     }
