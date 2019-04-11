@@ -1419,6 +1419,14 @@ input[type="radio"].visually-hidden {
 }
 
 
+/* ------------- Main content - Feedback ------------- */
+
+.feedback {
+  padding-top: 55px;
+  padding-right: 440px;
+}
+
+
 /* ------------- Footer ------------- */
 
 /* ------------- Footer - Map ------------- */
