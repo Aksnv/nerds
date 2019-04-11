@@ -1456,7 +1456,31 @@ input[type="radio"].visually-hidden {
   height: 416px;
 }
 
+.map__image {
+  max-width: none;
+  height: 416px;
+
+  background-color: #eeeeee;
+}
+
+.map__iframe {
+  position: relative;
+
+  display: none;
+  width: 100%;
+  height: 416px;
+
+  background-color: #eeeeee;
+  border: none;
+}
+
+.map__iframe_visible {
+  display: block;
+}
+
 .contacts {
+  position: relative;
+
   width: 320px;
   max-height: 360px;
   padding: 50px;
@@ -1464,6 +1488,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 
   overflow-y: scroll;
+  z-index: 1;
 }
 
 .contacts h3 {
@@ -1488,13 +1513,6 @@ input[type="radio"].visually-hidden {
 .contacts__button {
   width: 220px;
   margin-top: 20px;
-}
-
-.map img {
-  max-width: none;
-  height: 416px;
-
-  background-color: #eeeeee;
 }
 
 
