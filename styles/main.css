@@ -485,7 +485,7 @@ input[type="radio"].visually-hidden {
 .slider-view__header {
   display: block;
   margin-bottom: 25px;
-  padding-right: 645px;
+  padding-right: 640px;
 
   font-size: 55px;
   font-weight: 500;
@@ -1418,6 +1418,7 @@ input[type="radio"].visually-hidden {
   color: #666666;
 
   overflow-y: scroll;
+  -ms-overflow-style: none;
 }
 
 .catalog-list__button {
@@ -1511,6 +1512,8 @@ input[type="radio"].visually-hidden {
 
 .map .container {
   position: absolute;
+  left: calc(50% - 600px);
+
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1556,6 +1559,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 
   overflow-y: scroll;
+  -ms-overflow-style: none;
   z-index: 1;
 }
 
